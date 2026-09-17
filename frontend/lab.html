@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VulnX | Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Vuln<span>X</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="labs.html">Labs</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+        <div class="lab-status">
+            LAB ENVIRONMENT
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         LAB WORKSPACE
+    ========================== -->
+
+    <main class="lab-workspace">
+
+        <!-- Back -->
+
+        <a href="labs.html" class="back-link">
+            ← Back to Labs
+        </a>
+
+
+        <!-- Lab Header -->
+
+        <section class="lab-header">
+
+            <div>
+
+                <div class="section-label">
+                    VULNX / PRACTICE LAB
+                </div>
+
+                <h1 id="lab-title">
+                    SQL Injection
+                </h1>
+
+                <p id="lab-description">
+                    Learn how improper handling of user input can
+                    allow attackers to manipulate database queries.
+                </p>
+
+            </div>
+
+
+            <div class="lab-meta">
+
+                <div>
+                    <span>DIFFICULTY</span>
+                    <strong id="lab-difficulty">BEGINNER</strong>
+                </div>
+
+                <div>
+                    <span>TYPE</span>
+                    <strong id="lab-type">WEB SECURITY</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LAB CONTENT
+        ========================== -->
+
+        <section class="lab-layout">
+
+
+            <!-- Instructions -->
+
+            <div class="lab-panel">
+
+                <div class="panel-heading">
+                    <span>01</span>
+                    OBJECTIVE
+                </div>
+
+                <h2>
+                    Understand the vulnerability
+                </h2>
+
+                <p id="objective-description">
+                    SQL Injection occurs when untrusted user input is directly included in a database query. An attacker
+                    may manipulate the query and change how the database processes the request.
+                </p>
+
+                <div class="hint-box">
+
+                    <span>HINT</span>
+
+                    <p id="lab-hint">
+                        Look closely at how the username and password values are used to build the database query. Think
+                        about what happens when the input changes the structure of the query.
+                    </p>
+
+                </div>
+
+                <div class="solution-trigger-wrapper">
+                    <button id="view-solution-btn" class="view-solution-btn">
+                        <span>💡</span> Reveal Solution & Answer
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Practice Area -->
+
+            <div class="lab-panel">
+
+                <div class="panel-heading">
+                    <span>02</span>
+                    PRACTICE AREA
+                </div>
+
+                <div class="target-box">
+
+                    <div class="target-header">
+
+                        <span>
+                            TARGET APPLICATION
+                        </span>
+
+                        <span class="online">
+                            ● ONLINE
+                        </span>
+
+                    </div>
+
+
+                    <div class="login-box">
+
+                        <h3 id="practice-title">
+                            User Login
+                        </h3>
+
+                        <p id="practice-subtitle">
+                            Enter your credentials to continue.
+                        </p>
+
+
+                        <form id="lab-form">
+
+                            <label>
+                                Username
+                            </label>
+
+                            <input type="text" id="username" placeholder="Enter username" autocomplete="off">
+
+
+                            <label>
+                                Password
+                            </label>
+
+                            <input type="password" id="password" placeholder="Enter password">
+
+
+                            <button type="submit">
+                                LOGIN
+                                <span>→</span>
+                            </button>
+
+                        </form>
+
+
+                        <div id="result" class="result-box">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             LEARNING SECTION
+        ========================== -->
+
+        <section class="learning-section">
+
+            <div class="learning-card">
+
+                <span class="learning-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h2>
+                        What are you learning?
+                    </h2>
+
+                    <p id="learning-description">
+                        This lab is designed to demonstrate why
+                        applications must never trust user input
+                        when constructing database queries.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <span class="learning-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h2>
+                        Security principle
+                    </h2>
+
+                    <p id="learning-principle">
+                        Use parameterized queries / prepared statements to prevent SQL Injection.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         SOLUTION POPUP MODAL
+    ========================== -->
+    <div id="solution-modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <span class="modal-badge">SOLUTION</span>
+                    <div>
+                        <h3 id="modal-title">Lab Solution & Answer</h3>
+                        <p class="modal-subtitle" id="modal-lab-name">SQL Injection Solution</p>
+                    </div>
+                </div>
+                <button id="close-solution-modal" class="modal-close-btn" aria-label="Close Solution Modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="solution-section">
+                    <div class="solution-label">ANSWER / PAYLOAD</div>
+                    <div class="payload-box">
+                        <code id="solution-payload"></code>
+                        <button id="copy-payload-btn" class="copy-btn">
+                            <span>📋</span> Copy Payload
+                        </button>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-label">EXPLOIT WALKTHROUGH</div>
+                    <ol id="solution-steps" class="solution-steps">
+                    </ol>
+                </div>
+
+                <div class="solution-section">
+                    <div class="solution-label">TECHNICAL ANALYSIS</div>
+                    <div id="solution-explanation" class="solution-explanation-box">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="autofill-btn" class="autofill-btn">
+                    <span>⚡</span> Auto-fill Solution in Practice Area
+                </button>
+                <button id="dismiss-modal-btn" class="dismiss-btn">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab.js"></script>
+
+</body>
+
+</html>

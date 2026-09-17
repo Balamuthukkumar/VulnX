@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VulnX | Labs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Vuln<span>X</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+
+            <a href="labs.html" class="active">
+                Labs
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+        </nav>
+
+        <div class="lab-counter">
+            <span>03</span>
+            LABS AVAILABLE
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         LABS PAGE
+    ========================== -->
+
+    <main class="labs-page">
+
+
+        <!-- Page Heading -->
+
+        <section class="labs-heading">
+
+            <div class="section-label">
+                VULNX / PRACTICE ENVIRONMENT
+            </div>
+
+            <h1>
+                Cybersecurity
+                <span>Labs.</span>
+            </h1>
+
+            <p>
+                Explore controlled environments designed to help you
+                understand common web vulnerabilities through practice.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             LAB CARDS
+        ========================== -->
+
+        <section class="labs-grid">
+
+
+            <!-- =====================
+                 SQL INJECTION
+            ====================== -->
+
+            <article class="lab-card">
+
+                <div class="lab-top">
+
+                    <span class="lab-number">
+                        01
+                    </span>
+
+                    <span class="difficulty">
+                        BEGINNER
+                    </span>
+
+                </div>
+
+
+                <div class="lab-content">
+
+                    <div class="lab-icon">
+                        SQL
+                    </div>
+
+                    <h2>
+                        SQL Injection
+                    </h2>
+
+                    <p>
+                        Understand how untrusted input can manipulate
+                        database queries and expose sensitive data.
+                    </p>
+
+                </div>
+
+
+                <div class="lab-bottom">
+
+                    <span class="lab-type">
+                        WEB SECURITY
+                    </span>
+
+                    <a
+                        href="lab.html?lab=sql"
+                        class="start-lab"
+                        data-lab="sql">
+
+                        START LAB
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 IDOR
+            ====================== -->
+
+            <article class="lab-card">
+
+                <div class="lab-top">
+
+                    <span class="lab-number">
+                        02
+                    </span>
+
+                    <span class="difficulty">
+                        BEGINNER
+                    </span>
+
+                </div>
+
+
+                <div class="lab-content">
+
+                    <div class="lab-icon">
+                        ID
+                    </div>
+
+                    <h2>
+                        IDOR
+                    </h2>
+
+                    <p>
+                        Explore broken access control and discover how
+                        insecure object references can expose resources.
+                    </p>
+
+                </div>
+
+
+                <div class="lab-bottom">
+
+                    <span class="lab-type">
+                        ACCESS CONTROL
+                    </span>
+
+                    <a
+                        href="lab.html?lab=idor"
+                        class="start-lab"
+                        data-lab="idor">
+
+                        START LAB
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =====================
+                 REFLECTED XSS
+            ====================== -->
+
+            <article class="lab-card">
+
+                <div class="lab-top">
+
+                    <span class="lab-number">
+                        03
+                    </span>
+
+                    <span class="difficulty">
+                        BEGINNER
+                    </span>
+
+                </div>
+
+
+                <div class="lab-content">
+
+                    <div class="lab-icon">
+                        XSS
+                    </div>
+
+                    <h2>
+                        Reflected XSS
+                    </h2>
+
+                    <p>
+                        Learn how unsanitized user input can be reflected
+                        back to a browser and become executable code.
+                    </p>
+
+                </div>
+
+
+                <div class="lab-bottom">
+
+                    <span class="lab-type">
+                        WEB SECURITY
+                    </span>
+
+                    <a
+                        href="lab.html?lab=xss"
+                        class="start-lab"
+                        data-lab="xss">
+
+                        START LAB
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="lab.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Java compiled files
+backend/out/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+*.env
+
+# Temporary files
+*.tmp
