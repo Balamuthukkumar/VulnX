@@ -17,8 +17,13 @@ public class VulnXServer {
 
         createUsersTable();
 
-        HttpServer server = HttpServer.create(
-                new InetSocketAddress(8080), 0);
+      int port = Integer.parseInt(
+        System.getenv().getOrDefault("PORT", "8080")
+        );
+
+HttpServer server = HttpServer.create(
+        new InetSocketAddress("0.0.0.0", port), 0
+        );
 
         // ================================
         // LABS API
@@ -118,8 +123,7 @@ public class VulnXServer {
 
         server.start();
 
-        System.out.println(
-                "VulnX server running at http://localhost:8080");
+        System.out.println("VulnX server running on port " + port);
     }
 
 
